@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CoffeCont } from './app.coffee-cont';
+import { CoffeCont } from 'src/app/app-crud/app.coffee-cont';
 
 @Component({
   selector: 'app-root',

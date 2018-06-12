@@ -23,18 +23,9 @@
     </div>
     <br>
     <div>
-    <table class="table table-hover">
-        <tr>
-          <th>E-mail</th>
-          <th>Quantidade</th> 
-          <th>Date</th>
-        </tr>
-        <tr *ngFor="let i of list">
-          <td>{{i.email}}</td>
-          <td>{{i.quat}}</td> 
-          <td>{{i.create|date : format}}</td>
-        </tr>
-       </table>
+
+      <app-list [list]="listPai" (delete)="deletar($event)"></app-list>
+    
   </div>
 <div>
   <div class="form-inline">

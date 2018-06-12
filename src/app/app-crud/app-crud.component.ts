@@ -15,20 +15,24 @@ export class AppCrudComponent implements OnInit {
   ngOnInit() {
   }
 
-  list = [
+  listPai = [
     new CoffeCont("felipe@lala.com", 12, new Date(2018,6,11)),
     new CoffeCont("gabriel@lala.com", 5, new Date(2018,6,11))
   ];
 
   onButtonClick():void{
-    this.list.push(new CoffeCont("felipe@lala.com", 12, new Date(2018,6,11)));
-    this.list.push(new CoffeCont("gabriel@lala.com", 5, new Date(2018,6,11)));
+    this.listPai.push(new CoffeCont("felipe@lala.com", 12, new Date(2018,6,11)));
+    this.listPai.push(new CoffeCont("gabriel@lala.com", 5, new Date(2018,6,11)));
     alert(this.email);
   }
 
   submit():void{
-    this.list.push(new CoffeCont(this.email,this.quat , new Date()));
-    alert(this.email + " " + this.quat);
+    this.listPai.push(new CoffeCont(this.email,this.quat , new Date()));
+    
+  }
+
+  deletar(CoffeCont):void{
+    this.listPai.splice(this.listPai.indexOf(CoffeCont),1);
   }
  
   
