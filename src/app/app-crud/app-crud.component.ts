@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CoffeCont } from './app.coffee-cont';
-
+import { CoffeeContService } from '../coffee-cont.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-app-crud',
@@ -10,20 +11,22 @@ import { CoffeCont } from './app.coffee-cont';
 export class AppCrudComponent implements OnInit {
   email:string;
   quat:number;
-  constructor() { }
+  
+  @Input()
+  listPai:Array<CoffeCont> = [];
+
+
+  constructor (Contributions: CoffeeContService) {
+    this.listPai = Contributions.getData(); 
+  }
 
   ngOnInit() {
   }
 
-  listPai = [
-    new CoffeCont("felipe@lala.com", 12, new Date(2018,6,11)),
-    new CoffeCont("gabriel@lala.com", 5, new Date(2018,6,11))
-  ];
 
   onButtonClick():void{
     this.listPai.push(new CoffeCont("felipe@lala.com", 12, new Date(2018,6,11)));
     this.listPai.push(new CoffeCont("gabriel@lala.com", 5, new Date(2018,6,11)));
-    alert(this.email);
   }
 
   submit():void{
@@ -33,6 +36,11 @@ export class AppCrudComponent implements OnInit {
 
   deletar(CoffeCont):void{
     this.listPai.splice(this.listPai.indexOf(CoffeCont),1);
+  }
+
+  editar(CoffeCont):void{
+    
+
   }
  
   

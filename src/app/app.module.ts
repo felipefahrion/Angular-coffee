@@ -4,16 +4,20 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { AppCrudComponent } from './app-crud/app-crud.component';
 import { ListComponent } from './list/list.component';
+import { ReportComponent } from './report/report.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppCrudComponent,
-    ListComponent
+    ListComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

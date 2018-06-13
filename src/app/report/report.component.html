@@ -1,0 +1,16 @@
+<div>
+    <button (click)="informarMaior()" class="button"> Maiores contribuidores </button>
+    <button (click)="informarMenor()" class="button"> Menores contribuidores</button>
+    <table class="table table-hover">
+        <tr>
+          <th>E-mail</th>
+          <th>Quantidade</th> 
+        </tr>
+        <tr *ngFor="let i of list">
+           
+          <td>{{i.email}}</td>
+          <td>{{i.quat}}</td> 
+        </tr>
+       </table>
+
+</div>

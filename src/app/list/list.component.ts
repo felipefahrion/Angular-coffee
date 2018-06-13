@@ -3,6 +3,8 @@ import { AppCrudComponent } from 'src/app/app-crud/app-crud.component';
 import { CoffeCont } from './app.coffee-cont';
 
 
+
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

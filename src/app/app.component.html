@@ -1,5 +1,31 @@
-  
-    <app-app-crud></app-app-crud>
+<div id="wrapper">
+ 
+        <div class="header">
+            <h1>
+                Welcome to in Java Coffe! <a href="#default" class="logo">
+                    <img src="assets\Java-logo.png" width="65">
+                 </a> 
+      
+              </h1>
+       </div>
+      
+        <div class="topnav">
+        <a href="#home" class="active">Home</a>
+        <a routerLink="/report">report</a>
+        <a href="#contact">Contact</a>
+      
+        <a class="header a.active" href="#User">Users</a>
+        <a class="header a.active" href="#Logout">Logout</a>
+        </div>
+        <div>
+    <app-app-crud>
+    </app-app-crud>
+</div>
+<div>
+    <!-- <app-report [list]="listPai"></app-report> -->
+      <router-outlet></router-outlet>
 
-  
+</div>
+    
+</div>
   
