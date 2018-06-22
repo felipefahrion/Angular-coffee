@@ -6,12 +6,19 @@ export class CoffeCont{
     quat:number;
     create: Date;
 
-    constructor(_email, _quant, _create: Date = new Date()){
-            this.email = _email;
-            this.quat = _quant;
-            this.create = _create;
-        }
     
+    constructor(_email="", _quant=0, _create: Date = new Date()){
+        this.email = _email;
+        this.quat = _quant;
+        this.create = _create;
+    }
+        
+        getEmail(){return this.email;}
+        setEmail(email: string){this.email=email}
+        getQuat(){return this.quat;}
+        setQuat(quat: number){this.quat=quat}
+        getDate(){return this.create;}
+        setDate(date: Date){this.create=date}
 
 
 

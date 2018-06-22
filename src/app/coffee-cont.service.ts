@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CoffeCont } from './app-crud/app.coffee-cont';
+import { Chart } from './charts';
 
 @Injectable({
   providedIn: 'root'

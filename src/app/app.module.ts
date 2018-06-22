@@ -6,13 +6,17 @@ import { AppCrudComponent } from './app-crud/app-crud.component';
 import { ListComponent } from './list/list.component';
 import { ReportComponent } from './report/report.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppCrudComponent,
     ListComponent,
-    ReportComponent
+    ReportComponent,
+    HomeComponent,
+    GraphicsComponent
   ],
   imports: [
     BrowserModule,

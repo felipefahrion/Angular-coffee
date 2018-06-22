@@ -38,10 +38,12 @@ export class AppCrudComponent implements OnInit {
     this.listPai.splice(this.listPai.indexOf(CoffeCont),1);
   }
 
-  editar(CoffeCont):void{
-    
+  editar(coffe:CoffeCont):void{
+    coffe.setEmail(this.email);
+    coffe.setQuat(this.quat);
 
   }
  
   
 }
+
