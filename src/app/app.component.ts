@@ -7,5 +7,5 @@ import { CoffeCont } from 'src/app/app-crud/app.coffee-cont';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+
 }
