@@ -1,22 +1,25 @@
-<div id="wrapper">
+<div>
     <div class="header">
         <h1>
-            Welcome to in Java Coffe!
+            Would you like some coffee?
 
-            <a
-                href="#default"
+            <i 
+                routerLink="/home"
                 class="logo"
             >
                 <img
                     src="assets\Java-logo.png"
                     width="65"
                 >
-            </a>
+        </i>
         </h1>
     </div>
 
     <div class="topnav">
-        <a routerLink="/home" class="active">Home</a>
+        <a
+            routerLink="/home"
+            class="active"
+        >Home</a>
 
         <a routerLink="/app-crud">Crud</a>
 
@@ -26,17 +29,18 @@
 
         <a routerLink="/graphics">Charts</a>
 
-
-        <a class="header a.active" href="#User">Users</a>
+        <a
+            class="glyphicon glyphicon-trash"
+            href="#User"
+        >User</a>
 
         <a
-            class="header a.active"
+            class="right"
             href="#Logout"
         >Logout</a>
     </div>
 
     <div>
-        <!-- <app-report [list]="listPai"></app-report> -->
         <router-outlet></router-outlet>
     </div>
 </div>

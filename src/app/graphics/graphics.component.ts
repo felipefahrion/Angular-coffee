@@ -22,29 +22,38 @@ import * as Chart from 'chart.js';
 export class GraphicsComponent implements OnInit {
 
   list : Array<CoffeCont>;
-  //ctx:any;
 
   constructor (Contributions: CoffeeContService) {
     this.list = Contributions.getData();
 
+  }
+
+  contaLista(){
+    var i=0; 
+    for(let c in this.list){
+      i++;
+    }
+    return i;
   }
   
   ngOnInit() {
     var canvas : any = document.getElementById("myChart");
     var ctx = canvas.getContext("2d");
 
+    var num = this.contaLista();
+    
     var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: 'pie',
 
     // The data for our dataset
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["Would like some coffee?"],
         datasets: [{
-            label: "My First dataset",
+            label: "Pessoas na cafeteria",
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
+            data: [num],
         }]
     },
 
@@ -53,4 +62,5 @@ export class GraphicsComponent implements OnInit {
 });
   }
 
+  
 }
